@@ -8,8 +8,9 @@ var articleOne =
 {
    title : 'Article-One | Bishwajit Sharma',
    heading : 'Article One',
-   date: '5 sept, 2016',
-   content : `<p>
+   date: 'sept 5, 2016',
+   content : `
+            <p>
                 This is the contents of my first article which is very soon going to publish. 
                 This is the contents of my first article which is very soon going to publish.
                 This is the contents of my first article which is very soon going to publish.
@@ -69,7 +70,7 @@ function createTemplate (data)
                 </body>
             </html>
              `;
-             return htmltemplate;
+             return htmlTemplate;
     }
 
 app.get('/', function (req, res) {
