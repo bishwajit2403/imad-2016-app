@@ -44,8 +44,7 @@ var articles = {
     title : 'Article-Three | Bishwajit Sharma',
    heading : 'Article Three',
    date: 'sept 15, 2016',
-   content : `
-            <p>
+   content : `<p>
                 This is the contents of my third article which is very soon going to publish. 
                 This is the contents of my third article which is very soon going to publish.
                 This is the contents of my third article which is very soon going to publish.
@@ -67,6 +66,7 @@ var articles = {
                 This is the contents of my third article which is very soon going to publish.
             </p>`
     
+}
 };
 
 function createTemplate (data) {   
