@@ -1,14 +1,24 @@
 // Counter code
 var button = document.getElementById('counter');
-var counter = 0;
+
 button.onclick = function() {
     
-   // make a request to the counter endpoint
-   
+   // Create a request object
+   var request = new XMLHttpRequest();
    //capture the respone and store it in a variable
+   request.onreadystatechange = function (){
+     if (request.readyState === XMLHttpRequest.DONE )  {
+         // Take some actiin
+         if (request.status === 200) {
+             var counter = request.responceText;
+             var span = documnet.getElementById('count');
+            span.innerHTML = counter.toString();
+         }
+     }
+     // Not done yet
+   };
    
-   //render the variable in the correct spam
-   counter = counter + 1;
-   var span = documnet.getElementById('count');
-   span.innerHTML = counter.toString();
+    // Made the request
+    request.open('GET', 'http://bishwajit2403.imad.hasura-app.io/counter', true);
+    request.send(null);
 };
